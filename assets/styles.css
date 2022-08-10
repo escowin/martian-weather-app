@@ -1,0 +1,53 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    font-variant: small-caps;
+    border: 1px solid red;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: rgba(28, 23, 23, .8);
+    --secondary: rgba(252, 216, 216, 0.7);
+    --tertiary: rgba(74, 20, 20, 0.9);
+}
+
+body {
+    background-image: url(./images/elysium-planitia.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 99%;
+    padding: 1vw 2vw;
+}
+
+.current-weather {
+    background-color: var(--primary);
+    color: var(--secondary);
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    justify-content: center;
+    padding: 2vw;
+}
+
+.main-title {
+    grid-column: span 3;
+}
+
+.day, .temp, .wind {
+    padding: .5vw 1vw;
+}
+
+.day, .temp {
+    border-right: 2px solid var(--tertiary);
+}
+
+.info {
+    grid-column: span 2;
+}
+
+.units {
+    padding: 1vw;
+}
