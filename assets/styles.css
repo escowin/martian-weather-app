@@ -4,15 +4,17 @@
 
 * {
     font-variant: small-caps;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 0;
     padding: 0;
 }
 
 :root {
     --primary: rgba(28, 23, 23, .8);
-    --secondary: rgba(252, 216, 216, 0.7);
+    --secondary: rgba(245, 220, 220, 0.9);
     --tertiary: rgba(74, 20, 20, 0.9);
+    --accent: rgb(156, 62, 62);
+    --grey: rgb(171, 171, 171);
 }
 
 body {
@@ -27,21 +29,55 @@ body {
     background-color: var(--primary);
     color: var(--secondary);
     display: grid;
-    grid-template-columns: repeat(3, 33%);
+    gap: 1vw;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     padding: 2vw;
+    line-height: 1.5;
 }
 
 .main-title {
     grid-column: span 3;
+    color: var(--accent);
 }
 
 .day, .temp, .wind {
-    padding: .5vw 1vw;
+    padding: 0 1vw;
 }
 
-.day, .temp {
-    border-right: 2px solid var(--tertiary);
+.temp {
+    border-left: 2px solid var(--accent);
+    border-right: 2px solid var(--accent);
+}
+
+.wind {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.wind-direction {
+    background-color: var(--grey);
+    --size: 6rem;
+    height: var(--size);
+    width: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    grid-column: ;
+}
+
+/* fix triangle alignment */
+.wind-arrow {
+    /* js will update dynamically */
+    --direction: 50deg;
+    --size: 1rem;
+    height: calc(var(--size) * 3);
+    width: var(--size);
+    background-color: var(--accent);
+    clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+    transform: translateY(-50%) rotate(var(--direction));
+    transform-origin: bottom center;
+    transition: transform 5000ms ease;
 }
 
 .info {
