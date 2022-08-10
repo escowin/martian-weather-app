@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martian weather app</title>
+</head>
+<body>
+    <main class="current-weather">
+        <h1 class="main-title">Martian weather app</h1>
+        <section class="date">
+            <h2 class="header">Sol 377</h2>
+            <p class="date">August 10</p>
+        </section>
+        <section class="temp">
+            <h2 class="header">Temperature</h2>
+            <p class="temp-high">High: -80&deg;C</p>
+            <p class="temp-low">Low: -100&deg;C</p>
+        </section>
+        <section class="wind">
+            <h2 class="header">Wind</h2>
+            <p class="wind-speed">75 kph</p>
+            <div class="wind-direction">
+                <p class="screen-reader">45&deg;</p>
+                <div class="wind-arrow"></div>
+            </div>
+        </section>
+        <section class="info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A eveniet aliquam facilis quisquam iure perspiciatis, quidem asperiores fugiat molestiae impedit ducimus error, vero maxime molestias!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </section>
+        <section class="units">
+            <label for="metric">&deg;C</label>
+            <input type="radio" id="metric" name="unit" checked>
+            <button class="toggle"></button>
+            <label for="imperial">&deg;F</label>
+            <input type="radio" id="imperial" name="unit">
+        </section>
+    </main>
+    <footer class="previous-weather">
+        <label for="weather-toggle" class="show-previous-weather">&#8593;
+            <span class="screen-reader">Show previous weather</span>
+        </label>
+        <input type="checkbox" id="weather-toggle" class="show-previous-weather-toggle">
+        <h2 class="previous">Previous 7 days</h2>
+        <section class="previous-days">
+            <article class="previous-day">
+                <h3 class="previous-sol">Sol 370</h3>
+                <p class="previous-date">August 09</p>
+                <p class="previous-high">High: -80&deg;C</p>
+                <p class="previous-low">Low: -100&deg;C</p>
+                <button class="previous-info">More info</button>
+            </article>
+            <!-- article repeats 6 more times -->
+        </section>
+
+        <section id="footer">
+            <p>Martian weather app</p>
+            <a href="https://github.com/escowin">&copy; 2022 Edwin m. escobar</a>
+        </section>
+    </footer>
+</body>
+</html>
