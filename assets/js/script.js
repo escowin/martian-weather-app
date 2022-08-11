@@ -8,12 +8,22 @@ const apiURL = `https://api.nasa.gov/insight_weather/?api_key=${apiKey}&feedtype
 
 // logic | get data
 var getWeather = function() {
-    fetch(apiURL).then(res => res.json())
+    returnfetch(apiURL).then(res => res.json())
     .then(data => {
         const {
             sol_keys, validity_checks, ...solData
         } = data
-        console.log(data);
+        const temp = Object.entries(solData).map(([sol, data]) => {
+            return {
+                sol: sol,
+                date: new Date(data.First_UTC),
+                maxTemp: data.AT.mx,
+                minTemp: data.AT.mn,
+                windSpeed: data.HWS.av,
+                windDirection: data.WD.most_common.compass_point,
+            }
+        })
+        console.log(temp);
     })
 };
 
