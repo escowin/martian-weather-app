@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/styles.css"></link>
-    <!-- <script src="/" defer></script> -->
+    <link rel="stylesheet" href="./assets/css/styles.css"></link>
+    <script src="./assets/js/script.js" defer></script>
     <title>Martian weather app</title>
 </head>
 <body>
-    <!-- hardcoded for now. will use NASA's InSight API to dynamically plug in relevant data points -->
-    <main class="current-weather">
-        <h1 class="main-title">Martian weather app</h1>
+    <header id="header">
+        &copy;2022  <a href="https://github.com/escowin" target="_blank" class="link">Edwin m. escobar</a>
+    </header>
+
+    <!-- hardcoded for now. use MAAS API https://github.com/ingenology/mars_weather_api or InSight Weather https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY&feedtype=json&ver=1.0-->
+
+    <main class="current-weather weather">
+        <h1 class="main-title">Current martian weather</h1>
         <section class="day">
-            <h2 class="header">Sol 377</h2>
+            <h2 class="header sol">Sol 377</h2>
             <p class="date">August 10</p>
         </section>
         <section class="temp">
@@ -41,26 +46,66 @@
             <input type="radio" id="imperial" name="unit">
         </section>
     </main>
+
     <footer class="previous-weather">
-        <label for="weather-toggle" class="show-previous-weather">&#8593;
-            <span class="screen-reader">Show previous weather</span>
-        </label>
-        <input type="checkbox" id="weather-toggle" class="show-previous-weather-toggle">
-        <h2 class="previous">Previous 7 days</h2>
+        <h2 class="previous-header">Previous 7 days</h2>
         <section class="previous-days">
-            <article class="previous-day">
+            <article class="previous-day weather">
                 <h3 class="previous-sol">Sol 370</h3>
                 <p class="previous-date">August 09</p>
                 <p class="previous-high">High: -80&deg;C</p>
                 <p class="previous-low">Low: -100&deg;C</p>
                 <button class="previous-info">More info</button>
             </article>
-            <!-- article repeats 6 more times -->
-        </section>
 
-        <section id="footer">
-            <p>Martian weather app</p>
-            <a href="https://github.com/escowin">&copy; 2022 Edwin m. escobar</a>
+            <!-- article repeats 6 more times -->
+            <article class="previous-day weather">
+                <h3 class="previous-sol">Sol 370</h3>
+                <p class="previous-date">August 09</p>
+                <p class="previous-high">High: -80&deg;C</p>
+                <p class="previous-low">Low: -100&deg;C</p>
+                <button class="previous-info">More info</button>
+            </article>
+
+            <article class="previous-day weather">
+                <h3 class="previous-sol">Sol 370</h3>
+                <p class="previous-date">August 09</p>
+                <p class="previous-high">High: -80&deg;C</p>
+                <p class="previous-low">Low: -100&deg;C</p>
+                <button class="previous-info">More info</button>
+            </article>
+
+            <article class="previous-day weather">
+                <h3 class="previous-sol">Sol 370</h3>
+                <p class="previous-date">August 09</p>
+                <p class="previous-high">High: -80&deg;C</p>
+                <p class="previous-low">Low: -100&deg;C</p>
+                <button class="previous-info">More info</button>
+            </article>
+
+            <article class="previous-day weather">
+                <h3 class="previous-sol">Sol 370</h3>
+                <p class="previous-date">August 09</p>
+                <p class="previous-high">High: -80&deg;C</p>
+                <p class="previous-low">Low: -100&deg;C</p>
+                <button class="previous-info">More info</button>
+            </article>
+
+            <article class="previous-day weather">
+                <h3 class="previous-sol">Sol 370</h3>
+                <p class="previous-date">August 09</p>
+                <p class="previous-high">High: -80&deg;C</p>
+                <p class="previous-low">Low: -100&deg;C</p>
+                <button class="previous-info">More info</button>
+            </article>
+
+            <article class="previous-day weather">
+                <h3 class="previous-sol">Sol 370</h3>
+                <p class="previous-date">August 09</p>
+                <p class="previous-high">High: -80&deg;C</p>
+                <p class="previous-low">Low: -100&deg;C</p>
+                <button class="previous-info">More info</button>
+            </article>
         </section>
     </footer>
 </body>
