@@ -147,4 +147,11 @@ p {
     background-color: var(--accent);
     color: var(--tertiary);
     padding: .25vw .5vw;
+    transition: 2s;
+}
+
+.previous-info:hover {
+    color: var(--grey);
+    background-color: var(--tertiary);
+    box-shadow: 0 0 1.5vw var(--accent);
 }
