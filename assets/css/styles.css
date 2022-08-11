@@ -18,11 +18,21 @@
 }
 
 body {
-    background-image: url(./images/elysium-planitia.jpg);
+    background-image: url(../../assets/images/elysium-planitia.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: 99%;
     padding: 1vw 2vw;
+}
+
+p {
+    color: var(--grey);
+}
+
+#header {
+    color: var(--accent);
+    font-size: .75rem;
+    text-align: end;
 }
 
 .current-weather {
@@ -34,6 +44,18 @@ body {
     justify-content: center;
     padding: 2vw;
     line-height: 1.5;
+    box-shadow: 1vw 1vw 3vw var(--primary);
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    transition: 1s;
+}
+
+.link:hover {
+    color: var(--tertiary);
+    text-shadow: 0 0 20px var(--secondary);
 }
 
 .main-title {
@@ -63,7 +85,7 @@ body {
     border-radius: 50%;
     display: grid;
     place-items: center;
-    grid-column: ;
+    /* grid-column: ; */
 }
 
 /* fix triangle alignment */
@@ -86,4 +108,43 @@ body {
 
 .units {
     padding: 1vw;
+}
+
+.previous-weather, .previous-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: center;
+    line-height: 1.25;
+}
+
+.previous-header {
+    grid-column: span 7;
+    padding: 2vh 0 1vh 1vw;
+    color: var(--accent);
+    text-shadow: 1vw 1vw 1vw var(--primary);
+}
+
+.previous-days {
+    grid-column: span 7;
+    gap: 2vw;
+}
+
+.previous-day {
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 1vw 1.25vw;
+    box-shadow: 1vw 1vw 3vw var(--primary);
+}
+
+.previous-sol {
+    font-size: 1.25rem;
+}
+
+.previous-info {
+    margin-top: 1vh;
+    border-radius: .5rem;
+    border-style: none;
+    background-color: var(--accent);
+    color: var(--tertiary);
+    padding: .25vw .5vw;
 }
